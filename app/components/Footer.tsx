@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
 
   const serviceLinks = [
 
-    { name: "Meet", href: "/meet" },
+    { name: "Meet", href: "https://elevatemeet.netlify.app" },
     { name: "Course", href: "/courses" },
-    { name: "Quiz", href: "/quiz" },
-    { name: "Supercode", href: "/supercode" },
-    { name: "Policy", href: "/policy" },
+    { name: "Quiz", href: "https://elevatequiz.netlify.app/" },
+    { name: "Compiler", href: "https://elevatecompiler.netlify.app/" },
+
   ];
 
   return (
