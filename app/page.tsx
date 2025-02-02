@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import { ReviewMain } from "./components/comments/RemoveMain";
 
 
+
 import { CurriculumSection } from "./components/Curriculum/CurriculumSection";
 import { HeroSection } from "./components/Hero/HeroSection";
 import { HeroTitle } from "./components/comments/HeroTitle";
@@ -21,7 +22,7 @@ const Page: FC<Props> = (props) => {
   const [route, setRoute] = useState("Login");
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Heading
         title="Elevate"
         description="Elevate is a platform for students to learn and get help from teachers"
@@ -42,6 +43,7 @@ const Page: FC<Props> = (props) => {
         title="Discover the best features needed for you"
         subtitle="productivity on hands from aimer code"
         backgroundImage="https://cdn.builder.io/api/v1/image/assets/TEMP/9af687f0ffa7d286e12597b09b46671da4bd86ed9459c49e17d3f9ccc01b137a?placeholderIfAbsent=true&apiKey=c48d9b50468c496f834245b48efcd26e"
+       
       />
       <HeroTitle
          titleLine1="A Skill - Building Journey"

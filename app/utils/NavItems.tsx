@@ -38,10 +38,6 @@ export const navItemsData = [
     name: "About",
     url: "/about",
   },
-  {
-    name: "FAQ",
-    url: "/faq",
-  },
 ];
 
 const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
