@@ -28,33 +28,41 @@ const Hero: FC<Props> = (props) => {
   return (
     <>
 
-      <section className="flex flex-col justify-center pt-10 pb-20 w-full max-md:max-w-full">
-        <div className="flex flex-col self-center max-w-full w-[1276px]">
+      <section className="flex overflow-hidden flex-col justify-center pt-10 pb-20 w-full max-md:max-w-full sm:px-6 lg:px-0">
+
+        <div className="flex flex-col self-center w-full max-w-[1276px] px-4 sm:px-6 lg:px-0">
+
           <header className="flex flex-col justify-center w-full max-md:max-w-full">
-            <div className="flex flex-col w-full max-w-9xl px-20 max-md:max-w-full">
-              <h1 className="text-7xl font-black tracking-tighter leading-none text-black bg-clip-text bg-[linear-gradient(90deg,#EA728D_67.21%,#EF9EAE_71.33%,#ECCD43_81.49%,#42C3E5_85.63%)] max-md:max-w-full max-md:text-4xl">
-                Master New Skills with <span className="text-fuchsia-600">Elevate</span>🚀
+            <div className="flex flex-col w-full max-w-9xl px-4 sm:px-6 lg:px-20">
+
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter leading-none text-black bg-clip-text bg-[linear-gradient(90deg,#EA728D_67.21%,#EF9EAE_71.33%,#ECCD43_81.49%,#42C3E5_85.63%)] max-md:max-w-full max-md:text-3xl">
+
+                Master New Skills with <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#EA5BEB,#4B57F5)]">Elevate</span>🚀
               </h1>
-              <p className="mt-6 text-xl font-medium capitalize text-neutral-500 max-md:max-w-full">
+              <p className="mt-6 text-lg sm:text-xl font-medium capitalize text-neutral-500 max-md:max-w-full">
+
                 With expert instructors and interactive content, with high-quality learning experience all levels,
                 access personalized learning paths and achieve your educational goals.
               </p>
             </div>
           </header>
 
-          <div className="flex flex-wrap gap-8 items-center px-20 self-start mt-8 max-md:max-w-full">
-            <div className="flex items-center border rounded-full p-2 w-[400px] max-w-lg">
+          <div className="flex flex-wrap gap-6 sm:gap-8 items-center px-4 sm:px-6 lg:px-20 self-start mt-8 max-md:max-w-full">
+
+            <div className="flex items-center border rounded-full p-2 w-full max-w-lg sm:w-[400px]">
+
               <div className="1500px:w-[55%] 1100px:w-[78%] w-[90%] h-[50px] bg-transparent relative">
                 <input
                   type="search"
                   placeholder="Search Courses..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="bg-transparent  dark:border-none dark:bg-[#575757] dark:placeholder:text-[#ffffffdd] rounded-[5px] p-2 w-full h-full outline-none text-[#0000004e] dark:text-[#ffffffe6] text-[20px] font-[500] font-Josefin"
+                  className="bg-transparent dark:border-none dark:bg-[#575757] dark:placeholder:text-[#ffffffdd] rounded-[5px] p-2 w-full h-full outline-none text-black dark:text-white text-lg sm:text-xl font-medium"
                 />
 
               </div>
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 cursor-pointer" onClick={handleSearch}>
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition" onClick={handleSearch}>
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-white"
@@ -81,12 +89,14 @@ const Hero: FC<Props> = (props) => {
             </Link>
             <UserStats
               count="12k+"
+
               label="using the app"
               imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/448cdd46043dbb9ed3ffee86b2ac2efb46420fc0b02253f137970a4375f60f2b?placeholderIfAbsent=true&apiKey=c48d9b50468c496f834245b48efcd26e"
             />
           </div>
         </div>
-        <div className="image-container">
+        <div className="image-container flex flex-col sm:flex-row gap-6 sm:gap-10 items-center justify-center mt-10">
+
           <div className="moving-images">
             <img
               loading="lazy"
