@@ -43,7 +43,8 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="flex flex-col items-center justify-center w-full px-6 py-10 bg-white md:px-10">
+     <footer className="flex flex-col items-center justify-center w-full px-6 py-10 bg-white dark:bg-gray-900 md:px-10">
+
         {/* Top Section */}
         <div className="flex flex-wrap justify-between w-full max-w-screen-xl gap-10">
           {/* Left Section (Logo and Description) */}
@@ -51,7 +52,8 @@ const Footer: React.FC = () => {
             <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text md:text-6xl">
               Elevate
             </h1>
-            <p className="mt-4 text-sm text-gray-500 md:text-lg">
+            <p className="mt-4 text-sm text-gray-400 dark:text-gray-300 md:text-lg">
+
               It is a long established fact that a reader will be distracted looking.
             </p>
             <div className="flex gap-4 mt-4">
@@ -76,7 +78,8 @@ const Footer: React.FC = () => {
           {/* Right Section (Contact Information) */}
           <div className="flex flex-col items-start max-w-[240px]">
             <h3 className="text-lg font-bold md:text-2xl">Contact</h3>
-            <address className="mt-4 text-sm text-gray-500 not-italic md:text-lg">
+            <address className="mt-4 text-sm text-gray-400 dark:text-gray-300 not-italic md:text-lg">
+
               <a href="mailto:elevate@gmail.com" className="block">
                 elevate@gmail.com
               </a>
@@ -88,13 +91,15 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="w-full mt-12 text-center text-xs text-gray-400 md:text-sm">
+        <div className="w-full mt-12 text-center text-xs text-gray-400 dark:text-gray-300 md:text-sm">
+
           <p>Copyright © 2024 Elevate</p>
         </div>
 
         {/* Decorative Gradient at the Bottom */}
       </footer>
-      <div className="flex mt-8 w-full bg-[linear-gradient(82deg,#D82DFD_17.77%,#A93BFF_30.02%,#8C3CFF_58.49%,#5633FF_70.29%)] min-h-[10px] max-md:max-w-full" />
+      <div className="flex mt-8 w-full bg-[linear-gradient(82deg,#D82DFD_17.77%,#A93BFF_30.02%,#8C3CFF_58.49%,#5633FF_70.29%)] dark:bg-[linear-gradient(82deg,#5A189A_17.77%,#3C096C_30.02%,#240046_58.49%,#10002B_70.29%)] min-h-[10px] max-md:max-w-full" />
+
     </>
   );
 };
