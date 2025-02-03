@@ -35,9 +35,9 @@ const Hero: FC<Props> = (props) => {
           <header className="flex flex-col justify-center w-full max-md:max-w-full">
             <div className="flex flex-col w-full max-w-9xl px-4 sm:px-6 lg:px-20">
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter leading-none text-black bg-clip-text bg-[linear-gradient(90deg,#EA728D_67.21%,#EF9EAE_71.33%,#ECCD43_81.49%,#42C3E5_85.63%)] max-md:max-w-full max-md:text-3xl">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-black  tracking-tighter leading-none text-black bg-clip-text bg-[linear-gradient(90deg,#EA728D_67.21%,#EF9EAE_71.33%,#ECCD43_81.49%,#42C3E5_85.63%)] max-md:max-w-full max-md:text-3xl">
 
-                Master New Skills with <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#EA5BEB,#4B57F5)]">Elevate</span>🚀
+                <span className="dark:text-white">Master New Skills with</span> <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#EA5BEB,#4B57F5)]">Elevate</span>🚀
               </h1>
               <p className="mt-6 text-lg sm:text-xl font-medium capitalize text-neutral-500 max-md:max-w-full">
 
@@ -57,7 +57,7 @@ const Hero: FC<Props> = (props) => {
                   placeholder="Search Courses..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="bg-transparent dark:border-none dark:bg-[#575757] dark:placeholder:text-[#ffffffdd] rounded-[5px] p-2 w-full h-full outline-none text-black dark:text-white text-lg sm:text-xl font-medium"
+                  className="bg-transparent dark:border-none  dark:placeholder:text-[#ffffffdd] rounded-[5px] p-2 w-full h-full outline-none text-black dark:text-white text-lg sm:text-xl font-medium"
                 />
 
               </div>
