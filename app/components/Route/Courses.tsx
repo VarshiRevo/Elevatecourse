@@ -15,7 +15,7 @@ const Courses = (props: Props) => {
   return (
     <div>
       <div data-layername="topPop" className="flex flex-col items-center self-center max-md:max-w-full">
-      <h2 data-layername="popularCources" className="text-6xl font-bold leading-none text-black max-md:max-w-full max-md:text-4xl">
+      <h2 data-layername="popularCources" className="text-6xl font-bold leading-none text-black dark:text-white max-md:max-w-full max-md:text-4xl">
         Popular courses
       </h2>
         <br />
