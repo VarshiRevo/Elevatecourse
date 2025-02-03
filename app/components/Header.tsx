@@ -163,7 +163,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
               {/* mobile sidebar */}
               {openSidebar && (
                 <div
-                className="fixed w-full h-screen top-0 left-0 z-[99999] dark:bg-gray-950 bg-[#00000024]"
+                  className="fixed w-full h-screen top-0 left-0 z-[99999] dark:bg-gray-950 bg-[#00000024]"
                   onClick={handleClose}
                   id="screen"
                 >
@@ -177,14 +177,15 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                           alt=""
                           width={30}
                           height={30}
-                          className="w-[30px] h-[30px] rounded-full cursor-pointer"
-                          style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none" }}
+                          className=" rounded-full cursor-pointer flex items-center justify-center"
+                          style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none", margin: "auto" }}
                         />
+
                       </Link>
                     ) : (
                       <HiOutlineUserCircle
                         size={25}
-                        className="cursor-pointer dark:text-white text-black"
+                        className="rounded-fulll cursor-pointer dark:text-white text-black flex items-center justify-center"
                         onClick={() => {
                           setOpen(true);
                           setOpenSidebar(false);
