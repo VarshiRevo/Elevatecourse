@@ -6,14 +6,14 @@ const AboutHero: React.FC = () => {
     <section className="flex flex-col justify-center py-10 px-6 md:px-14 w-full">
       <div className="flex flex-col w-full max-w-[1276px]">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none text-black">
-          A Skill boosting agency <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#EA5BEB,#4B57F5)]">Elevate</span>⚡
+          <span className='dark:text-white'>A Skill boosting agency</span> <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#EA5BEB,#4B57F5)]">Elevate</span>⚡
         </h1>
         <p className="mt-6 md:mt-10 text-lg md:text-xl font-medium text-neutral-500">
           Supercode offers expert-led online courses designed to upskill learners. Accessible, flexible, and industry-relevant, we help individuals and professionals achieve their learning goals anytime, anywhere.
         </p>
       </div>
       <div className="flex flex-wrap gap-6 md:gap-10 items-center mt-8 md:mt-12">
-        <p className="text-sm font-medium leading-6 text-black">
+        <p className="text-sm font-medium leading-6 text-black dark:text-white">
           Trusted by the world&apos;s biggest brands
         </p>
         <div className="flex gap-4 md:gap-7 items-center">
