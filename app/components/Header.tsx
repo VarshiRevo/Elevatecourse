@@ -86,6 +86,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
             <div
               className={`${active
                 ? "dark:bg-opacity-50 bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-black fixed top-0 left-0 w-full h-[80px] z-[80] border-b dark:border-[#ffffff1c] shadow-xl transition duration-500"
+
                 : "w-full border-b dark:border-[#ffffff1c] h-[80px] z-[80] dark:shadow"
                 }`}
             >
@@ -94,16 +95,16 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                   <div>
                     <Link
                       href={"/"}
-                      className={`text-[25px] font-Poppins font-[500] text-black dark:text-white flex items-center gap-2`}
+                      className={`text-[25px] font-[500] text-black dark:text-white flex items-center gap-2`}
                     >
-                      <div className="flex gap-2.5 items-center self-stretch my-auto text-3xl font-black text-black whitespace-nowrap">
+                      <div className="flex gap-2.5 items-center self-stretch my-auto text-3xl font-black dark:text-white  text-black whitespace-nowrap">
                         <img
                           loading="lazy"
                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/52b36090a44447a86a77abc7580c9213dc2ab96488c69450f72f927c385a15e1?placeholderIfAbsent=true&apiKey=c48d9b50468c496f834245b48efcd26e"
                           alt="Levate logo"
                           className="object-contain shrink-0 self-stretch my-auto aspect-[1.3] w-[87px]"
                         />
-                        <span className="self-stretch my-auto">Levate</span>
+                        <span className="self-stretch my-auto ">Levate</span>
                       </div>
                     </Link>
                   </div>
@@ -162,11 +163,12 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
               {/* mobile sidebar */}
               {openSidebar && (
                 <div
-                  className="fixed w-full h-screen top-0 left-0 z-[99999] dark:bg-[unset] bg-[#00000024]"
+                className="fixed w-full h-screen top-0 left-0 z-[99999] dark:bg-gray-950 bg-[#00000024]"
                   onClick={handleClose}
                   id="screen"
                 >
-                  <div className="w-[70%] fixed z-[999999999] h-screen bg-white dark:bg-slate-900 dark:bg-opacity-90 top-0 right-0">
+                  <div className="w-[70%] fixed z-[999999999] h-screen bg-white dark:bg-gray-900 dark:bg-opacity-95 top-0 right-0 shadow-lg dark:shadow-gray-800">
+
                     <NavItems activeItem={activeItem} isMobile={true} />
                     {userData ? (
                       <Link href={"/profile"} onClick={() => setOpenSidebar(false)}>
@@ -192,7 +194,8 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
 
                     <br />
                     <br />
-                    <p className="text-[16px] px-2 pl-5 text-black dark:text-white">
+                    <p className="text-[16px] px-2 pl-5 text-black dark:text-gray-300">
+
                       Copyright © 2024 Elevate
                     </p>
                   </div>
