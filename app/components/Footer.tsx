@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
     { name: "Profile", href: "/profile" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Course Dashboard", href: "/course-dashboard" },
-    { name: "FAQ", href: "/faq" },
+
   ];
 
   const serviceLinks = [
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="w-full mt-12 text-center text-xs text-gray-400 md:text-sm">
-          <p>Copyright © 2024 Camos Lab | All Rights Reserved</p>
+          <p>Copyright © 2024 Elevate</p>
         </div>
 
         {/* Decorative Gradient at the Bottom */}
