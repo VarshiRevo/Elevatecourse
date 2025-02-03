@@ -43,12 +43,13 @@ const EditCategories = (props: Props) => {
   };
 
   const newCategoriesHandler = () => {
-    if (categories[categories.length - 1].title === "") {
+    if (categories.length > 0 && categories[categories.length - 1].title === "") {
       toast.error("Category title cannot be empty");
     } else {
-      setCategories((prevCategory: any) => [...prevCategory, { title: "" }]);
+      setCategories((prevCategory: any) => [...(prevCategory || []), { _id: Date.now(), title: "" }]);
     }
   };
+  
 
   const areCategoriesUnchanged = (
     originalCategories: any[],
