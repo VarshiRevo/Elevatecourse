@@ -30,7 +30,7 @@ export const CurriculumSection: React.FC = () => {
                 {/* Header Section */}
                 <header className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mb-12 md:mb-16">
                     <div className="flex-1">
-                        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-black">
+                        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-black dark:text-white">
                             New Skills with SuperCode <br className="hidden md:block" />
                             A Detailed Look at Our Curriculum
                         </h1>
