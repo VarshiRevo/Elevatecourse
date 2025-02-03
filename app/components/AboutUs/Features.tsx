@@ -35,7 +35,7 @@ const Features: React.FC = () => {
   return (
     <section className="flex flex-col py-12 md:py-24 w-full">
       <div className="flex flex-col justify-center items-center w-full max-w-[1079px] text-center px-6">
-        <h2 className="text-4xl md:text-6xl font-bold leading-none text-black">
+        <h2 className="text-4xl md:text-6xl font-bold leading-none text-black dark:text-white">
           Skills are the key to unlocking potential
         </h2>
         <p className="mt-4 md:mt-8 text-lg md:text-xl font-medium text-neutral-500">
