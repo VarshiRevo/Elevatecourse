@@ -109,35 +109,36 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                   </div>
                   <div className="flex items-center">
                     <NavItems activeItem={activeItem} isMobile={false} />
-        
+
                     {/* only for mobile */}
-                    <div className="800px:hidden">
+                    <div className="800px:hidden flex items-center justify-between gap-4">
+                      {userData ? (
+                        <Link href={"/profile"}>
+                          <Image
+                            src={userData?.user.avatar ? userData.user.avatar.url : avatar}
+                            alt="Profile"
+                            width={30}
+                            height={30}
+                            className="w-[30px] h-[30px] rounded-full cursor-pointer"
+                            style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none" }}
+                          />
+                        </Link>
+                      ) : (
+                        <HiOutlineUserCircle
+                          size={25}
+                          className="cursor-pointer text-black dark:text-white"
+                          onClick={() => setOpen(true)}
+                        />
+                      )}
                       <HiOutlineMenuAlt3
                         size={25}
                         className="cursor-pointer dark:text-white text-black"
                         onClick={() => setOpenSidebar(true)}
                       />
-                      {userData ? (
-                      <Link href={"/profile"}>
-                        <Image
-                          src={userData?.user.avatar ? userData.user.avatar.url : avatar}
-                          alt=""
-                          width={30}
-                          height={30}
-                          className="w-[30px] h-[30px] rounded-full cursor-pointer"
-                          style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none" }}
-                        />
-                      </Link>
-                    ) : (
-                      <HiOutlineUserCircle
-                        size={25}
-                        className="hidden 800px:block cursor-pointer dark:text-white text-black"
-                        onClick={() => setOpen(true)}
-                      />
-                    )}
                     </div>
+
                     {userData ? (
-                      <Link href={"/profile"}>
+                      <Link href={"/profile"} >
                         <Image
                           src={userData?.user.avatar ? userData.user.avatar.url : avatar}
                           alt=""
@@ -168,7 +169,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                   <div className="w-[70%] fixed z-[999999999] h-screen bg-white dark:bg-slate-900 dark:bg-opacity-90 top-0 right-0">
                     <NavItems activeItem={activeItem} isMobile={true} />
                     {userData ? (
-                      <Link href={"/profile"}>
+                      <Link href={"/profile"} onClick={() => setOpenSidebar(false)}>
                         <Image
                           src={userData?.user.avatar ? userData.user.avatar.url : avatar}
                           alt=""
@@ -181,14 +182,18 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                     ) : (
                       <HiOutlineUserCircle
                         size={25}
-                        className=" cursor-pointer dark:text-white text-black"
-                        onClick={() => setOpen(true)}
+                        className="cursor-pointer dark:text-white text-black"
+                        onClick={() => {
+                          setOpen(true);
+                          setOpenSidebar(false);
+                        }}
                       />
                     )}
+
                     <br />
                     <br />
                     <p className="text-[16px] px-2 pl-5 text-black dark:text-white">
-                      Copyright © 2023 Elevate
+                      Copyright © 2024 Elevate
                     </p>
                   </div>
                 </div>
