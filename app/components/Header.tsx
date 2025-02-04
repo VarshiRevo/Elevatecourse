@@ -177,20 +177,22 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                           alt=""
                           width={30}
                           height={30}
-                          className=" rounded-full cursor-pointer flex items-center justify-center"
-                          style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none", margin: "auto" }}
+                          className="rounded-full cursor-pointer flex items-center justify-center mx-auto"
+                          style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none" }}
                         />
+
 
                       </Link>
                     ) : (
                       <HiOutlineUserCircle
                         size={25}
-                        className="rounded-fulll cursor-pointer dark:text-white text-black flex items-center justify-center"
+                        className="rounded-full cursor-pointer dark:text-white text-black flex items-center justify-center mx-auto"
                         onClick={() => {
                           setOpen(true);
                           setOpenSidebar(false);
                         }}
                       />
+
                     )}
 
                     <br />
