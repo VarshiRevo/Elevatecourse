@@ -58,7 +58,10 @@ const Signup: FC<Props> = ({ setRoute }) => {
 
   return (
     <div className="w-full">
-      <h1 className={`${styles.title}`}>Join to ELearning</h1>
+      <h1 className={`${styles.title}`}>Join to <span className="text-transparent bg-clip-text "style={{
+                  backgroundImage:
+                    'linear-gradient(90deg,#EA5BEB,#4B57F5)',
+                }}>Elevate</span></h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label className={`${styles.label}`} htmlFor="email">
