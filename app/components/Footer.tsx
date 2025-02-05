@@ -49,7 +49,10 @@ const Footer: React.FC = () => {
         <div className="flex flex-wrap justify-between w-full max-w-screen-xl gap-10">
           {/* Left Section (Logo and Description) */}
           <div className="flex flex-col items-start max-w-[240px]">
-            <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text md:text-6xl">
+            <h1 className="text-4xl font-extrabold  text-transparent bg-clip-text md:text-6xl"style={{
+                  backgroundImage:
+                    'linear-gradient(90deg,#EA5BEB,#4B57F5)',
+                }}>
               Elevate
             </h1>
             <p className="mt-4 text-sm text-gray-400 dark:text-gray-300 md:text-lg">
