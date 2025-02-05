@@ -55,7 +55,10 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
 
   return (
     <div className="w-full">
-      <h1 className={`${styles.title}`}>Login with ELearning</h1>
+      <h1 className={`${styles.title}`}>Login with <span className="text-transparent bg-clip-text "style={{
+                  backgroundImage:
+                    'linear-gradient(90deg,#EA5BEB,#4B57F5)',
+                }}>Elevate</span></h1>
       <form onSubmit={handleSubmit}>
         <label className={`${styles.label}`} htmlFor="email">
           Enter your Email
