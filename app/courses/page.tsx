@@ -9,7 +9,7 @@ import Heading from "../utils/Heading";
 import { styles } from "../styles/style";
 import CourseCard from "../components/Course/CourseCard";
 import Footer from "../components/Footer";
-
+import { AddOn } from '../components/Curriculum/AddOn';
 type Props = {};
 
 const Page = (props: Props) => {
@@ -43,7 +43,12 @@ const Page = (props: Props) => {
       ));
     }
   }, [data, category, search]);
-
+  const addOns = [
+    { text: "Get Certificate", backgroundColor: "#FFD3D7" },
+    { text: "Amazing Instructor", backgroundColor: "#FFEDBF" },
+    { text: "Video lessons", backgroundColor: "#B5F5C8" },
+    { text: "Lifetime Support", backgroundColor: "#ABE1EF" }
+];
   return (
     <div>
       {isLoading || categoriesLoading ? (
@@ -59,8 +64,8 @@ const Page = (props: Props) => {
           />
           <div className="w-[95%] 800px:w-[85%] m-auto min-h-[70vh]">
             <Heading
-              title={"All courses - Elearning"}
-              description={"Elearning is a programming community."}
+              title={"All courses - EduAcadmia"}
+              description={"EduAcademia is a programming community."}
               keywords={"programming community, coding skills, expert insights, collaboration, growth"}
             />
             <br />
@@ -88,10 +93,16 @@ const Page = (props: Props) => {
                   </div>
                 ))
               ) : (
-                <p className="text-gray-500">No categories found.</p>
+                <p className="text-gray-500">.&nbsp; &nbsp; &nbsp; </p>
               )}
+               <div className="flex flex-wrap  gap-4">
+                        {addOns.map((addon, index) => (
+                            <AddOn key={index} {...addon} />
+                        ))}
+                    </div>
             </div>
-
+            
+            
             {/* No Courses Found Message */}
             {courses.length === 0 && (
               <p className={`${styles.label} justify-center min-h-[50vh] flex items-center`}>
